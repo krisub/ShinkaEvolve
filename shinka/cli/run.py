@@ -24,6 +24,7 @@ SUPPORTED_INITIAL_EXTENSIONS: dict[str, str] = {
     ".jl": "julia",
     ".rs": "rust",
     ".swift": "swift",
+    ".c": "c",
     ".cpp": "cpp",
     ".cc": "cpp",
     ".cxx": "cpp",

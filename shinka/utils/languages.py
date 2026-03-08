@@ -9,6 +9,7 @@ _LANGUAGE_ALIASES: dict[str, str] = {
 }
 
 _LANGUAGE_EXTENSIONS: dict[str, str] = {
+    "c": "c",
     "cuda": "cu",
     "cpp": "cpp",
     "python": "py",
@@ -20,6 +21,7 @@ _LANGUAGE_EXTENSIONS: dict[str, str] = {
 }
 
 _EVOLVE_COMMENT_PREFIXES: dict[str, str] = {
+    "c": "//",
     "cuda": "//",
     "cpp": "//",
     "python": "#",
@@ -31,6 +33,7 @@ _EVOLVE_COMMENT_PREFIXES: dict[str, str] = {
 }
 
 _LANGUAGE_FENCE_TAGS: dict[str, tuple[str, ...]] = {
+    "c": ("c",),
     "cuda": ("cuda", "cu"),
     "cpp": ("cpp", "c++", "cc", "cxx"),
     "python": ("python", "py"),
