@@ -812,6 +812,10 @@ class AsymmetricUCB(BanditBase):
 
     def set_state(self, state: Dict[str, Any]) -> None:
         """Restore the internal state from serialization."""
+        n_saved = state["n_submitted"].size
+        if n_saved != self._n_arms:
+            # Config changed (e.g. different number of models): keep fresh state
+            return
         self.n_submitted = state["n_submitted"].copy()
         self.n_completed = state["n_completed"].copy()
         self.s = state["s"].copy()
